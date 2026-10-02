@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service Policy | Movers &amp; Shakers</title>
+<meta name="description" content="Movers &amp; Shakers — Service Policy / Chính sách dịch vụ / サービスポリシー">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0d;
+    --bg2:#101013;
+    --text:#ece8e1;
+    --soft:#a9a49c;
+    --faint:#6a6660;
+    --rule:#26262b;
+    --gold:#c2a36b;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(1100px 620px at 50% -14%, #1a1a20 0%, rgba(26,26,32,0) 62%),
+      var(--bg);
+    color:var(--text);
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    font-weight:300;
+    line-height:1.95;
+    letter-spacing:.015em;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:660px;margin:0 auto;padding:68px 26px 90px}
+
+  /* ---------- wordmark ---------- */
+  .mark{text-align:center}
+  .mark .amp{
+    font-family:"Cormorant Garamond",serif;
+    font-size:40px;font-weight:300;color:var(--gold);
+    line-height:1;display:block;margin-bottom:16px;
+  }
+  .mark .name{
+    font-family:"Cormorant Garamond",serif;
+    font-size:27px;font-weight:400;letter-spacing:.3em;
+    text-transform:uppercase;margin:0;color:var(--text);
+  }
+  .mark .rule{
+    width:46px;height:1px;background:var(--gold);
+    margin:26px auto 24px;opacity:.75;
+  }
+  .mark .doc{
+    font-family:"Noto Serif JP",serif;
+    font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--soft);margin:0;
+  }
+
+  /* ---------- language ---------- */
+  .switch{display:flex;justify-content:center;gap:28px;margin:40px 0 52px}
+  .switch button{
+    font-family:inherit;font-size:11.5px;font-weight:400;
+    letter-spacing:.2em;text-transform:uppercase;
+    background:none;border:0;padding:4px 0 7px;
+    color:var(--faint);cursor:pointer;position:relative;transition:color .25s;
+  }
+  .switch button::after{
+    content:"";position:absolute;left:50%;bottom:0;
+    width:0;height:1px;background:var(--gold);
+    transform:translateX(-50%);transition:width .3s ease;
+  }
+  .switch button:hover{color:var(--soft)}
+  .switch button[aria-current="true"]{color:var(--gold)}
+  .switch button[aria-current="true"]::after{width:100%}
+
+  /* ---------- body ---------- */
+  .intro{
+    font-family:"Noto Serif JP",serif;
+    font-size:15px;color:var(--soft);text-align:center;
+    margin:0 0 56px;line-height:2.1;
+  }
+  ol{list-style:none;counter-reset:n;margin:0;padding:0}
+  ol li{
+    counter-increment:n;
+    padding:30px 0 30px 54px;
+    border-top:1px solid var(--rule);
+    position:relative;
+  }
+  ol li:last-of-type{border-bottom:1px solid var(--rule)}
+  ol li::before{
+    content:counter(n,decimal-leading-zero);
+    position:absolute;left:0;top:32px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:17px;color:var(--gold);letter-spacing:.06em;
+  }
+  ol li h2{
+    font-family:"Noto Serif JP",serif;
+    font-size:14.5px;font-weight:400;letter-spacing:.14em;
+    margin:0 0 10px;color:var(--text);
+  }
+  ol li p{margin:0;font-size:14.5px;color:var(--soft);line-height:2.05}
+
+  .closing{
+    font-family:"Noto Serif JP",serif;
+    text-align:center;font-size:14px;color:var(--text);
+    margin:58px 0 0;line-height:2.1;
+  }
+  .closing::before{
+    content:"";display:block;width:26px;height:1px;
+    background:var(--gold);margin:0 auto 26px;opacity:.6;
+  }
+  footer{
+    margin-top:72px;text-align:center;
+    font-family:"Cormorant Garamond",serif;
+    font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:#4d4a46;
+  }
+
+  [data-lang]{display:none}
+  [data-lang].active{display:block}
+  span[data-lang].active{display:inline}
+
+  @media (max-width:420px){
+    .wrap{padding:52px 20px 70px}
+    .mark .name{font-size:21px;letter-spacing:.24em}
+    .switch{gap:18px}
+    ol li{padding-left:44px}
+  }
+  @media print{
+    body{background:#fff;color:#1a1a1a}
+    .switch,footer{display:none}
+    .mark .amp,.mark .rule,ol li::before,.closing::before{color:#9b7f45;background:#9b7f45}
+    .mark .amp{color:#9b7f45}
+    ol li{border-color:#ccc;break-inside:avoid}
+    ol li p,.intro{color:#333}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mark">
+    <p class="name">Movers &amp; Shakers</p>
+    <div class="rule"></div>
+    <p class="doc">
+      <span data-lang="ja" class="active">サービスポリシー</span>
+      <span data-lang="vi">Chính sách dịch vụ</span>
+      <span data-lang="en">Service Policy</span>
+    </p>
+  </header>
+
+  <nav class="switch" aria-label="Language">
+    <button type="button" data-set="ja">日本語</button>
+    <button type="button" data-set="vi">Tiếng Việt</button>
+    <button type="button" data-set="en">English</button>
+  </nav>
+
+  <!-- 日本語 -->
+  <section data-lang="ja">
+    <p class="intro">Movers &amp; Shakers へようこそ。<br>お客様が安心して過ごせるよう、次のルールをお願いします。</p>
+    <ol>
+      <li><h2>撮影禁止</h2><p>入口でカメラにシールを貼ります。他のお客様を勝手に撮ることは法律違反です。撮影した方は退店いただき、以後ご入場できません。</p></li>
+      <li><h2>飲酒したら運転不可</h2><p>ベトナムでは少量でも飲んで運転すれば違法です。運転してお帰りの方にはお酒をお出しできません。帰りの車は当店が手配します。</p></li>
+      <li><h2>18歳未満お断り</h2><p>法律により、18歳未満の入店とお酒の提供はできません。入口で年齢を確認します。酔っている方へのお酒もお断りします。</p></li>
+      <li><h2>ドレスコード</h2><p>スマートカジュアル以上。短パン、スポーツウェア、サンダルはご遠慮ください。</p></li>
+      <li><h2>営業時間</h2><p>法律に従い、深夜2時から朝8時は営業しません。</p></li>
+      <li><h2>入場をお断りする場合</h2><p>ルール違反、他のお客様への迷惑、違法な持ち込みがある場合です。性別・民族・宗教などによる差別はしません。</p></li>
+      <li><h2>お客様情報</h2><p>法律の範囲内で厳重に守ります。警察など公的機関から正式な要請があった場合は、法律に従います。</p></li>
+    </ol>
+    <p class="closing">以上にご同意のうえ、どうぞごゆっくりお過ごしください。</p>
+  </section>
+
+  <!-- Tiếng Việt -->
+  <section data-lang="vi">
+    <p class="intro">Chào mừng Quý khách đến Movers &amp; Shakers.<br>Để tất cả Quý khách đều yên tâm, xin vui lòng tuân thủ các quy định sau.</p>
+    <ol>
+      <li><h2>Không chụp ảnh, ghi hình</h2><p>Camera thiết bị sẽ được dán niêm phong tại cửa. Chụp ảnh, ghi hình người khác khi chưa có sự đồng ý là trái pháp luật. Khách vi phạm sẽ được mời ra và không được vào lại.</p></li>
+      <li><h2>Đã uống rượu bia thì không lái xe</h2><p>Theo pháp luật Việt Nam, đã uống rượu bia thì không được lái xe. Chúng tôi không phục vụ đồ uống có cồn cho khách tự lái xe. Quán sẽ hỗ trợ gọi xe đưa Quý khách về.</p></li>
+      <li><h2>Không phục vụ người dưới 18 tuổi</h2><p>Người dưới 18 tuổi không được vào quán và không được phục vụ rượu bia. Chúng tôi kiểm tra giấy tờ tại cửa. Quán cũng không phục vụ thêm rượu bia cho khách đã có dấu hiệu say.</p></li>
+      <li><h2>Dress code</h2><p>Tối thiểu smart casual. Không quần short, không đồ thể thao, không dép hở ngón.</p></li>
+      <li><h2>Giờ hoạt động</h2><p>Theo quy định của pháp luật, quán không hoạt động từ 02h00 đến 08h00.</p></li>
+      <li><h2>Trường hợp từ chối phục vụ</h2><p>Khi khách vi phạm quy định, gây ảnh hưởng đến khách khác, hoặc mang vật phẩm trái pháp luật vào quán. Chúng tôi không phân biệt đối xử về giới tính, dân tộc, tôn giáo.</p></li>
+      <li><h2>Thông tin khách hàng</h2><p>Được bảo mật trong khuôn khổ pháp luật. Khi có yêu cầu chính thức từ cơ quan nhà nước có thẩm quyền, chúng tôi thực hiện theo quy định của pháp luật.</p></li>
+    </ol>
+    <p class="closing">Xin Quý khách đồng ý với các quy định trên và có một buổi thật thoải mái.</p>
+  </section>
+
+  <!-- English -->
+  <section data-lang="en">
+    <p class="intro">Welcome to Movers &amp; Shakers.<br>To keep every guest comfortable, please observe the following.</p>
+    <ol>
+      <li><h2>No photography or filming</h2><p>Device cameras are sealed at the entrance. Recording other guests without consent is against the law. Guests who do so will be asked to leave and will not be readmitted.</p></li>
+      <li><h2>No driving after drinking</h2><p>Vietnamese law prohibits driving after consuming any alcohol. We do not serve alcohol to guests who are driving. We will arrange a car for your journey home.</p></li>
+      <li><h2>No entry under 18</h2><p>Guests under 18 may not enter and will not be served alcohol. ID is checked at the entrance. We also stop serving alcohol to guests showing signs of intoxication.</p></li>
+      <li><h2>Dress code</h2><p>Smart casual minimum. No shorts, no athletic wear, no open-toed footwear.</p></li>
+      <li><h2>Opening hours</h2><p>In accordance with the law, we do not operate between 02:00 and 08:00.</p></li>
+      <li><h2>Refusal of service</h2><p>We may refuse entry or service for rule violations, disruption to other guests, or bringing illegal items onto the premises. We do not discriminate on grounds of gender, ethnicity, or religion.</p></li>
+      <li><h2>Guest information</h2><p>Kept confidential within the limits of the law. Where a formal request is made by a competent authority, we comply as the law requires.</p></li>
+    </ol>
+    <p class="closing">By entering, you agree to the above. Please enjoy your time with us.</p>
+  </section>
+
+  <footer>Movers &amp; Shakers</footer>
+</div>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.switch button');
+  var LANGS = ['ja','vi','en'];
+
+  function setLang(code){
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.classList.toggle('active', el.getAttribute('data-lang') === code);
+    });
+    buttons.forEach(function(b){
+      b.setAttribute('aria-current', b.getAttribute('data-set') === code ? 'true' : 'false');
+    });
+    document.documentElement.lang = code;
+    try { localStorage.setItem('msh-lang', code); } catch(e){}
+    if (history.replaceState) history.replaceState(null, '', '#' + code);
+  }
+
+  function detect(){
+    var h = (location.hash || '').replace('#','');
+    if (LANGS.indexOf(h) > -1) return h;
+    var s = null;
+    try { s = localStorage.getItem('msh-lang'); } catch(e){}
+    if (LANGS.indexOf(s) > -1) return s;
+    var n = (navigator.language || 'en').toLowerCase();
+    if (n.indexOf('ja') === 0) return 'ja';
+    if (n.indexOf('vi') === 0) return 'vi';
+    return 'en';
+  }
+
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-set')); });
+  });
+
+  setLang(detect());
+})();
+</script>
+</body>
+</html>
